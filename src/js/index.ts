@@ -56,13 +56,15 @@ class IoTDashboardApp
 	private readonly baseUrl: string = "https://ems.iv.navvis.com/";
 
 	// Replace this field with your backend address
-	private readonly serverUrl: string = "https://navvis-simulator-6ewwd.ondigitalocean.app";
+	private readonly serverUrl: string = "https://navvis-simulator-6etrf.ondigitalocean.app";
 	// private readonly serverUrl: string = "http://localhost:3000";
 
 	// Replace this field with your MQTT broker address
-	private readonly dockerAddr = "54.164.220.108";
+	private readonly dockerAddr = "birwaz.store";
+	// private readonly dockerAddr = "54.164.220.108";
 
-	private readonly mqttPort = 15675;
+	// private readonly mqttPort = 15675;
+	private readonly mqttPort = 15673;
 
 	private ivApi: ApiInterface;
 
@@ -212,7 +214,7 @@ class IoTDashboardApp
 
 		this.ivApi.view.service.setPrimaryView(ViewType.MAP);
 
-		this.client = connect(`https://${this.dockerAddr}:${this.mqttPort}/ws`);
+		this.client = connect(`https://${this.dockerAddr}:${this.mqttPort}/wss`, {protocol: "wss"});
 
 		this.client.on("message", this.handleMqttMessage.bind(this));
 
@@ -640,7 +642,7 @@ class IoTDashboardApp
   
 		var player = new Clappr.Player({
 		//   source: 'https://multiplatform-f.akamaihd.net/i/multi/will/bunny/big_buck_bunny_,640x360_400,640x360_700,640x360_1000,950x540_1500,.f4v.csmil/master.m3u8',
-		  source: 'https://therare.me/hls/test.m3u8',
+		  source: 'https://birwaz.store/hls/test.m3u8',
 		  disableErrorScreen: true, // Disable the internal error screen plugin
 		  height: 350,
 		  width: '100%',
