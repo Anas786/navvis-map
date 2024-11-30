@@ -56,12 +56,12 @@ class IoTDashboardApp
 	private readonly baseUrl: string = "https://park.iv.navvis.com";
 
 	// Replace this field with your backend address
-	// private readonly serverUrl: string = "navvis-api.devsy.tech";
-	private readonly serverUrl: string = "http://localhost:3000";
+	private readonly serverUrl: string = "navvis-api.devsy.tech";
+	// private readonly serverUrl: string = "http://localhost:3000";
 
 	// Replace this field with your MQTT broker address
-	private readonly dockerAddr = "localhost";
-	// private readonly dockerAddr = "navvis-api.devsy.tech";
+	// private readonly dockerAddr = "localhost";
+	private readonly dockerAddr = "navvis-api.devsy.tech";
 
 	private readonly mqttPort = 15673;
 
