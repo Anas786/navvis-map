@@ -53,17 +53,16 @@ declare var Clappr:any;
 class IoTDashboardApp
 {
 	// Replace this field with your IV instance address
-	private readonly baseUrl: string = "https://ems.iv.navvis.com/";
+	private readonly baseUrl: string = "https://park.iv.navvis.com";
 
 	// Replace this field with your backend address
-	private readonly serverUrl: string = "https://navvis-simulator-6etrf.ondigitalocean.app";
-	// private readonly serverUrl: string = "http://localhost:3000";
+	// private readonly serverUrl: string = "navvis-api.devsy.tech";
+	private readonly serverUrl: string = "http://localhost:3000";
 
 	// Replace this field with your MQTT broker address
-	private readonly dockerAddr = "birwaz.store";
-	// private readonly dockerAddr = "54.164.220.108";
+	private readonly dockerAddr = "localhost";
+	// private readonly dockerAddr = "navvis-api.devsy.tech";
 
-	// private readonly mqttPort = 15675;
 	private readonly mqttPort = 15673;
 
 	private ivApi: ApiInterface;
